@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
   <header class="site-header">
@@ -41,6 +41,13 @@
         <button class="filter" data-filter="legal">Legal e-bikes <b></b></button>
         <button class="filter" data-filter="emoto">E-motos <b></b></button>
         <button class="filter" data-filter="trail">Trail bikes <b></b></button>
+      </div>
+      <div class="spec-filters" aria-label="Filter by specifications">
+        <div class="spec-filter"><label for="powerFilter">Power</label><select id="powerFilter"><option value="all">Any power</option><option value="under8">Under 8 kW</option><option value="8to15">8–14.9 kW</option><option value="15plus">15+ kW</option></select></div>
+        <div class="spec-filter"><label for="speedFilter">Top speed</label><select id="speedFilter"><option value="all">Any speed</option><option value="under40">Under 40 mph</option><option value="40to55">40–54 mph</option><option value="55plus">55+ mph</option></select></div>
+        <div class="spec-filter"><label for="rangeFilter">Claimed range</label><select id="rangeFilter"><option value="all">Any range</option><option value="under40">Under 40 miles</option><option value="40to60">40–59 miles</option><option value="60plus">60+ miles</option></select></div>
+        <div class="spec-filter"><label for="sizeFilter">Size</label><select id="sizeFilter"><option value="all">Any size</option><option value="compact">Compact</option><option value="mid">Mid-size</option><option value="full">Full-size</option></select></div>
+        <button class="reset-filters" id="resetSpecFilters" type="button" disabled>Reset filters</button>
       </div>
       <div class="bike-grid" id="bikeGrid"></div>
       <div class="empty-state" id="emptyState" hidden><h3>No rides found</h3><p>Try another model, brand, or category.</p></div>
@@ -92,8 +99,8 @@
 
   <footer><div class="brand"><span class="brand-mark">M</span><span>MOTOPEDIA</span></div><p>Independent research index. Verify specifications, price, legality and availability with the manufacturer before purchase.</p><span>Updated Aug 2026</span></footer>
 
-  <dialog id="detailModal"><button class="close-modal" aria-label="Close">×</button><div id="modalContent"></div></dialog>
+  <dialog id="detailModal"><button class="close-modal" aria-label="Close">×</button><button class="profile-nav profile-prev" data-profile-nav="-1" aria-label="Previous bike">‹</button><button class="profile-nav profile-next" data-profile-nav="1" aria-label="Next bike">›</button><div id="modalContent"></div></dialog>
   <dialog id="compareModal"><button class="close-modal" aria-label="Close">×</button><div id="compareContent"></div></dialog>
-  <script src="app.js?v=8"></script>
+  <script src="app.js?v=13"></script>
 </body>
 </html>

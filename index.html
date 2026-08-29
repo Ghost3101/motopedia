@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Motopedia — a researched buyer's encyclopedia for electric pit bikes, e-motos, trail bikes and legal e-bikes.">
+  <title>Motopedia — Electric Bike Encyclopedia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=8">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Motopedia home"><span class="brand-mark">M</span><span>MOTOPEDIA</span></a>
+    <nav><a href="#library">Library</a><a href="#compare">Compare</a><a href="#guide">Buyer's guide</a><a href="#action">In action</a><a href="#questions">Q&amp;A</a></nav>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> THE ELECTRIC RIDE INDEX</p>
+        <h1>Find the ride<br><em>that fits.</em></h1>
+        <p class="hero-sub">Straight specs. Clear categories. Seventeen electric machines, researched for riders—not algorithms.</p>
+        <form class="search-wrap" id="searchForm" role="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+          <input id="searchInput" type="search" placeholder="Search a model, brand, or spec..." autocomplete="off" aria-label="Search bikes">
+          <kbd>/</kbd>
+          <button type="submit" class="search-submit">Search</button>
+        </form>
+        <div class="quick-stats"><div><strong>17</strong><span>machines</span></div><div><strong>4</strong><span>categories</span></div><div><strong>2026</strong><span>data refresh</span></div></div>
+      </div>
+    </section>
+
+    <section class="library" id="library">
+      <div class="section-head"><div><p class="eyebrow"><span></span> EXPLORE THE FIELD</p><h2>Every ride, one place.</h2></div><p id="resultCount">Showing 17 machines</p></div>
+      <div class="filters" role="group" aria-label="Filter by category">
+        <button class="filter active" data-filter="all">All rides <b>17</b></button>
+        <button class="filter" data-filter="pitbike">Pit bikes <b></b></button>
+        <button class="filter" data-filter="legal">Legal e-bikes <b></b></button>
+        <button class="filter" data-filter="emoto">E-motos <b></b></button>
+        <button class="filter" data-filter="trail">Trail bikes <b></b></button>
+      </div>
+      <div class="bike-grid" id="bikeGrid"></div>
+      <div class="empty-state" id="emptyState" hidden><h3>No rides found</h3><p>Try another model, brand, or category.</p></div>
+    </section>
+
+    <section class="compare-band" id="compare">
+      <div><p class="eyebrow light"><span></span> QUICK COMPARE</p><h2>Numbers tell a story.</h2><p>Select any two machines to see their core specs side by side.</p></div>
+      <button id="compareButton" disabled>Compare selected <span id="compareCount">0/2</span> →</button>
+    </section>
+
+    <section class="guide" id="guide">
+      <p class="eyebrow"><span></span> BEFORE YOU BUY</p><h2>Four things that matter.</h2>
+      <div class="guide-grid">
+        <article><b>01</b><h3>Where will you ride?</h3><p>Powerful e-motos are generally off-road only. “E-bike” styling does not make a machine street legal.</p></article>
+        <article><b>02</b><h3>Check real capacity</h3><p>Compare watt-hours, not only voltage. Claimed range changes sharply with speed, terrain and rider weight.</p></article>
+        <article><b>03</b><h3>Fit beats hype</h3><p>Seat height, wheel size and weight affect confidence more than peak power—especially for newer riders.</p></article>
+        <article><b>04</b><h3>Leave room for gear</h3><p>Budget for a full-face helmet, boots, gloves and protection. High-power models demand moto-grade gear.</p></article>
+      </div>
+    </section>
+
+    <section class="action" id="action">
+      <div class="action-head">
+        <div><p class="eyebrow"><span></span> REAL RIDES. REAL RIDERS.</p><h2>Bikes in action.</h2></div>
+        <p>See every machine ridden in the real world. Select a video to watch it on YouTube.</p>
+      </div>
+      <div class="action-grid" id="actionGrid"></div>
+      <p class="action-note">Videos belong to their respective YouTube creators. Ride legally, wear appropriate protection, and never copy stunts beyond your ability.</p>
+    </section>
+
+    <section class="questions" id="questions">
+      <div class="questions-intro">
+        <p class="eyebrow"><span></span> COMMON RIDER QUESTIONS</p>
+        <h2>Before you plug in.</h2>
+        <p>Clear answers to the questions buyers commonly ask about e-bikes and high-power e-motos.</p>
+      </div>
+      <div class="qa-list">
+        <details open><summary>What is the difference between an e-bike and an e-moto?<span>+</span></summary><p>A legal e-bike is a bicycle with operable pedals that fits a defined power and assisted-speed class. An e-moto is closer to an electric motorcycle: it may have much more power, exceed 28 mph, or lack functional pedals. Styling alone does not decide the legal category.</p></details>
+        <details><summary>What do Class 1, Class 2 and Class 3 mean?<span>+</span></summary><p>In California, Class 1 provides pedal assistance up to 20 mph; Class 2 can use a throttle up to 20 mph; and Class 3 provides pedal assistance up to 28 mph. Local rules can further limit where each class may be ridden.</p></details>
+        <details><summary>Can I ride an e-moto in a bike lane or on a bicycle trail?<span>+</span></summary><p>Usually not. Machines outside the legal e-bike classes are generally motor vehicles, even if they resemble bicycles. Trail access also varies by land manager, park and e-bike class, so check the exact route before riding.</p></details>
+        <details><summary>How far will an e-bike really travel on one charge?<span>+</span></summary><p>Published range is an estimate, not a guarantee. Rider weight, speed, hills, temperature, tire pressure, terrain and assist level all affect it. Compare battery watt-hours and plan a reserve instead of relying only on the headline range.</p></details>
+        <details><summary>How should I safely charge an e-bike battery?<span>+</span></summary><p>Use only the supplied or manufacturer-approved charger and replacement battery. Charge while you are present, never while sleeping, follow the manual, and unplug when charging is complete. Stop using damaged, modified, swollen or overheating packs.</p></details>
+        <details><summary>Can I use a universal or faster charger?<span>+</span></summary><p>Only if the bike manufacturer specifically approves it for that exact battery. A connector that fits does not prove voltage, current or charging communication are compatible, and the wrong charger can create a serious fire risk.</p></details>
+        <details><summary>What safety gear should I wear on an e-moto?<span>+</span></summary><p>For high-power machines, use motorcycle-level protection: a certified full-face helmet, eye protection, gloves, over-the-ankle boots, and abrasion and impact protection. Higher speed and weight call for more protection than an ordinary bicycle setup.</p></details>
+        <details><summary>What should I check before buying?<span>+</span></summary><p>Confirm where the machine is legal to ride, battery certification and replacement cost, dealer and parts support, rider fit, brakes, suspension, weight and warranty. Verify the exact model-year specifications with the manufacturer before paying.</p></details>
+      </div>
+      <p class="qa-sources">Guidance: <a href="https://ww3.arb.ca.gov/carbapps/ebikeincentives/e-bike-basics/index.html" target="_blank" rel="noreferrer">California E-Bike Basics</a> · <a href="https://www.cpsc.gov/node/65775" target="_blank" rel="noreferrer">CPSC battery safety</a> · <a href="https://www.nps.gov/subjects/biking/e-bikes.htm" target="_blank" rel="noreferrer">National Park Service e-bike rules</a></p>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">M</span><span>MOTOPEDIA</span></div><p>Independent research index. Verify specifications, price, legality and availability with the manufacturer before purchase.</p><span>Updated Aug 2026</span></footer>
+
+  <dialog id="detailModal"><button class="close-modal" aria-label="Close">×</button><div id="modalContent"></div></dialog>
+  <dialog id="compareModal"><button class="close-modal" aria-label="Close">×</button><div id="compareContent"></div></dialog>
+  <script src="app.js?v=8"></script>
+</body>
+</html>

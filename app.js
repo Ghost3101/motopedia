@@ -22,6 +22,30 @@ const bikeImages={lbx:'https://www.surroner.com/wp-content/uploads/2025/12/hf_20
 bikeImages.lbx='assets/bikes/surron-lbx.png?v=2';
 bikeImages.ultra='assets/bikes/surron-ultra-offroad.png?v=2';
 bikeImages.drift='assets/bikes/electro-drift-kart.jpg?v=1';
+const helmets=[
+ {id:'fox-v1',brand:'Fox',name:'V1 Motocross Helmet',category:'Entry dirt bike',price:'$259.95',weight:'≈ 1,500 g*',cert:'DOT + ECE 22.06',shell:'Polycarbonate / ABS',safety:'MIPS, adjustable visor, removable washable liner',desc:'Fox’s approachable race-inspired helmet brings MIPS protection and modern certification to everyday motocross and trail sessions.',buy:'https://www.foxracing.com/helmets/moto/v1/',source:[['Fox V1 official','https://www.foxracing.com/helmets/moto/v1/']]},
+ {id:'fox-v2',brand:'Fox',name:'V2 Motocross Helmet',category:'Performance dirt bike',price:'Legacy / varies',weight:'Model-year varies',cert:'DOT + ECE (verify year)',shell:'Composite or PC-ABS by model year',safety:'MIPS, MVRS visor, Varizorb EPS',desc:'The V2 is a proven Fox performance platform. Because current availability and specifications vary by model year, verify the exact label before buying.',buy:'https://www.foxracing.com/helmets/moto/v2/',source:[['Fox V2 official page','https://www.foxracing.com/helmets/moto/v2/']]},
+ {id:'fox-v3',brand:'Fox',name:'V3 Motocross Helmet',category:'Race-ready dirt bike',price:'$479.95',weight:'Model-year varies',cert:'DOT + ECE 22.06',shell:'Composite fiberglass',safety:'MIPS, multi-density EPS, emergency cheek-pad release, hydration routing',desc:'Fox’s race-focused V3 adds a composite shell and layered impact management for fast motocross and aggressive off-road riding.',buy:'https://www.foxracing.com/helmets/moto/v3/',source:[['Fox V3 official','https://www.foxracing.com/helmets/moto/v3/']]},
+ {id:'sm10',brand:'Alpinestars',name:'Supertech S-M10',category:'Premium race helmet',price:'≈ $919.95',weight:'≈ 1,300 g*',cert:'DOT + ECE 22.06',shell:'3K carbon / aramid composite',safety:'MIPS, four-density EPS, A-Head fit system, emergency release',desc:'Alpinestars’ premium S-M10 is built around a lightweight carbon-aramid shell, adjustable fit system and high-airflow race layout.',buy:'https://www.alpinestars.com/products/supertech-m10-solid-helmet-1-black-glossy-carbon',source:[['Alpinestars S-M10','https://www.alpinestars.com/products/supertech-m10-solid-helmet-1-black-glossy-carbon']]},
+ {id:'sm8',brand:'Alpinestars',name:'Supertech S-M8',category:'Premium race helmet',price:'≈ $699.95',weight:'≈ 1,300–1,360 g*',cert:'DOT + ECE (market dependent)',shell:'Carbon / aramid composite',safety:'MIPS, A-Head fit, emergency release cheek pads',desc:'The S-M8 keeps Alpinestars’ premium fit and protection approach in a slightly more accessible Supertech package.',buy:'https://www.alpinestars.com/collections/supertech-m8-helmets',source:[['Alpinestars S-M8 collection','https://www.alpinestars.com/collections/supertech-m8-helmets']]},
+ {id:'aviator3',brand:'Airoh',name:'Aviator 3 EVO',category:'FIM race helmet',price:'€724.99+',weight:'1,330 g ±50 g',cert:'ECE 22.06 + FIM Racing 02',shell:'HPC carbon',safety:'AMS2 EVO, AMLS, AEFR emergency release, Hydra hydration system',desc:'Airoh’s flagship Aviator 3 EVO pairs a carbon shell with FIM-level race certification and a deep off-road ventilation system.',buy:'https://www.airoh.com/en/model/aviator-iii-evo/',source:[['Airoh Aviator 3 EVO','https://www.airoh.com/en/model/aviator-iii-evo/']]},
+ {id:'wraaap',brand:'Airoh',name:'WRAAAP',category:'Entry motocross helmet',price:'€155.99+',weight:'1,260 g ±50 g',cert:'ECE 22.06 (verify market)',shell:'HRT thermoplastic',safety:'Removable washable liner, double-D strap, multi-port ventilation',desc:'Airoh’s WRAAAP is a lightweight, accessible motocross helmet with three shell sizes and a simple, serviceable interior.',buy:'https://www.airoh.com/en/model/wraaap/',source:[['Airoh WRAAAP','https://www.airoh.com/en/model/wraaap/']]},
+ {id:'moto10',brand:'Bell',name:'Moto-10 Spherical',category:'Premium race helmet',price:'$999.95',weight:'≈ 1,390 g*',cert:'DOT + ECE 22.06 + Snell',shell:'Segmented 3K carbon',safety:'Spherical Technology powered by MIPS, TEAS airflow, NMR bumpers, MERS cheek pads',desc:'Bell’s top off-road helmet uses a segmented carbon shell and Spherical Technology powered by MIPS for premium race protection and airflow.',buy:'https://www.bellhelmets.com/powersports/off-road/',source:[['Bell off-road helmets','https://www.bellhelmets.com/powersports/off-road/']]},
+ {id:'moto9',brand:'Bell',name:'Moto-9 MIPS',category:'Race helmet',price:'≈ $479.99',weight:'≈ 1,450 g*',cert:'DOT + ECE + Snell (market dependent)',shell:'Tri-Matrix composite',safety:'MIPS, Velocity Flow ventilation, Flying Bridge visor, magnetic cheek pads',desc:'The Moto-9 MIPS is a race-proven composite helmet with strong ventilation and emergency-friendly magnetic cheek pads.',buy:'https://www.bellhelmets.com/powersports/off-road/',source:[['Bell off-road helmets','https://www.bellhelmets.com/powersports/off-road/']]},
+ {id:'mx10',brand:'Bell',name:'MX-10 MIPS',category:'Value motocross helmet',price:'$229.95',weight:'≈ 1,300 g*',cert:'DOT + ECE 22.06 (market dependent)',shell:'Polycarbonate',safety:'MIPS, Flying Bridge visor, NMR bumpers, antimicrobial liner',desc:'Bell’s MX-10 MIPS keeps the core off-road features riders need in a value-focused polycarbonate package.',buy:'https://www.bellhelmets.com/powersports/off-road/',source:[['Bell MX-10 official','https://de.bellhelmets.com/product/mx-10-mips-solid/37021.html']]}
+];
+const helmetImages={
+ 'fox-v1':'https://www.dirtbikeplus.jp/html/upload/save_image/FO/29665_001_4.jpg',
+ 'fox-v2':'https://www.secomoto.com/media/catalog/product/cache/85efa000ac40e55c8f2f2b4705c56fc5/2/1/21770-004-casco-fox-v2-murc-helmet-green-2019-1.jpg',
+ 'fox-v3':'https://cdn11.bigcommerce.com/s-0m9ut/images/stencil/1280x1280/products/661406/942898/192b16115c395a4532a73c27972ddf2672775bd1-large__69746.1762926136.jpg?c=2',
+ sm10:'https://www.alpinestars.com/cdn/shop/files/8300323-1188-ba_s-m10-solid-helmet-dot_50c46de9-69d3-41c0-b94d-4f7c86c1184b.png?v=1752553793',
+ sm8:'https://www.alpinestars.com/cdn/shop/files/8301523-3012-ba_sm8-radium-helmet.png?v=1715030123&width=1080',
+ aviator3:'https://9714a728.delivery.rocketcdn.me/wp-content/uploads/2025/10/AVIATOR-3-EVO_WHITE_B.webp',
+ wraaap:'https://motorcycle-soul.com/78845-thickbox_default/casque-airoh-wraaap-vision-rouge-bleu-brillant.jpg',
+ moto10:'https://vistaoutdoor.widen.net/content/ooxytgatqx/webp/34007_023_3.webp?h=1500&w=1500',
+ moto9:'https://motocrossgiant.com/cdn/shop/files/bell-moto-9-mips-dirt-motorcycle-helmet-matte-black-right__90428.1703888920.1280.1280.jpg?v=1751361866',
+ mx10:'https://vault.widen.net/content/ylql3bkabi?h=1500&w=1500'
+};
 const labels={all:'All rides',pitbike:'Pit bike',legal:'Legal / pedal e-bike',emoto:'E-moto',trail:'Trail bike'};
 const actionVideos=[
  {id:'lbx',creator:'Starline World',title:'I Turned My Stock Surron Into a Fully Built Monster',video:'O9PRIjS9LzY'},
@@ -65,6 +89,8 @@ let filter='all', selected=[], currentDetailIndex=0;
 const specFilters={power:'all',speed:'all',range:'all',size:'all'};
 const sizeGroups={lbx:'mid',ultra:'full',rtrlite:'compact',rtrsport:'compact',rtrxl:'mid',alpha:'compact',ss2:'mid',ss3:'mid',ss4:'mid',x3:'mid',mx3:'mid',mx4:'mid',mx5:'mid',bonnell:'full',dart24:'full',dart20:'compact',drift:'full'};
 const grid=document.querySelector('#bikeGrid'), search=document.querySelector('#searchInput');
+const helmetGrid=document.querySelector('#helmetGrid'), helmetSearch=document.querySelector('#helmetSearch');
+let helmetBrand='all';
 
 function numericValue(value){const values=(value.match(/[\d.]+/g)||[]).map(Number);return values.length?Math.max(...values):0}
 function powerValue(value){const number=numericValue(value);return /\bkW\b/i.test(value)?number:number/1000}
@@ -82,8 +108,16 @@ function render(){
  document.querySelectorAll('.bike-card').forEach(el=>{el.addEventListener('click',e=>{if(!e.target.closest('[data-compare]'))openDetail(el.dataset.id)});el.addEventListener('keydown',e=>{if(e.key==='Enter')openDetail(el.dataset.id)})});
  document.querySelectorAll('[data-compare]').forEach(btn=>btn.addEventListener('click',()=>toggleCompare(btn.dataset.compare)));
 }
+function renderHelmets(){
+ const q=helmetSearch.value.toLowerCase().trim();
+ const shown=helmets.filter(h=>(helmetBrand==='all'||h.brand===helmetBrand)&&(`${h.brand} ${h.name} ${h.category} ${h.cert} ${h.shell} ${h.safety}`.toLowerCase().includes(q)));
+ helmetGrid.innerHTML=shown.map(h=>`<article class="helmet-card" data-helmet-id="${h.id}" tabindex="0"><div class="helmet-visual"><span class="helmet-tag">${h.brand}</span><img class="helmet-photo" src="${helmetImages[h.id]}" alt="${h.brand} ${h.name}" loading="lazy" onerror="this.classList.add('is-broken')"></div><div class="helmet-body"><span class="brandline">${h.category}</span><h3>${h.name}</h3><div class="helmet-specs"><div><b>${h.cert.split(' + ')[0]}</b><span>Certification</span></div><div><b>${h.weight.replace(' ±50 g','')}</b><span>Weight</span></div><div><b>${h.price}</b><span>Typical price</span></div></div><div class="card-link"><span>View full profile</span><span>↗</span></div></div></article>`).join('');
+ document.querySelector('#helmetCount').textContent=`Showing ${shown.length} helmet${shown.length===1?'':'s'}`;
+ document.querySelectorAll('.helmet-card').forEach(el=>{el.addEventListener('click',()=>openHelmet(el.dataset.helmetId));el.addEventListener('keydown',e=>{if(e.key==='Enter')openHelmet(el.dataset.helmetId)})});
+}
 function purchasePanel(purchase){const ronsterOption=purchase.ronsterUrl?`<a class="buy-button ronster-choice" href="${purchase.ronsterUrl}" target="_blank" rel="noopener noreferrer">Ronster Rides <b>↗</b></a>`:`<span class="buy-button unavailable" aria-disabled="true">Not at Ronster</span>`;return `<section class="buy-panel ${purchase.ronsterUrl?'at-ronster':'at-official'}"><div><span>CHOOSE YOUR SELLER</span><h3>Where do you want to buy?</h3><p>${purchase.ronsterUrl?'This model is currently listed by Ronster Rides, or you can shop directly with the official brand.':'Ronster Rides does not currently list this exact model. The official brand option is available.'} Stock, price, shipping, and warranty terms can change—verify them before ordering.</p></div><div class="buy-options">${ronsterOption}<a class="buy-button official-choice" href="${purchase.officialUrl}" target="_blank" rel="noopener noreferrer">Official ${purchase.seller} <b>↗</b></a></div></section>`}
 function openDetail(id,direction=0){
+ document.querySelectorAll('.profile-nav').forEach(btn=>btn.style.display='');
  const b=bikes.find(x=>x.id===id),purchase=purchaseLinks[id];
  currentDetailIndex=bikes.findIndex(x=>x.id===id);
  const modal=document.querySelector('#detailModal'),content=document.querySelector('#modalContent');
@@ -92,6 +126,12 @@ function openDetail(id,direction=0){
  modal.querySelector('.profile-prev').setAttribute('aria-label',`Previous bike: ${previous.name}`);modal.querySelector('.profile-next').setAttribute('aria-label',`Next bike: ${next.name}`);
  if(direction){content.classList.remove('profile-slide-left','profile-slide-right');void content.offsetWidth;content.classList.add(direction>0?'profile-slide-right':'profile-slide-left')}
  if(!modal.open)modal.showModal()
+}
+function openHelmet(id){
+ const h=helmets.find(x=>x.id===id),modal=document.querySelector('#detailModal'),content=document.querySelector('#modalContent');
+ document.querySelectorAll('.profile-nav').forEach(btn=>btn.style.display='none');
+ content.innerHTML=`<div class="modal-hero helmet-modal-hero"><p class="eyebrow"><span></span>${h.category} · ${h.brand}</p><h2>${h.name}</h2><p>${h.desc}</p><img class="modal-photo" src="${helmetImages[h.id]}" alt="${h.brand} ${h.name}" onerror="this.style.display='none'"></div><div class="modal-main"><div class="spec-grid">${[['Typical price',h.price],['Weight',h.weight],['Certification',h.cert],['Shell',h.shell],['Safety systems',h.safety],['Best use','Motocross / off-road']].map(s=>`<div class="spec-cell"><span>${s[0]}</span><b>${s[1]}</b></div>`).join('')}</div><section class="helmet-buy"><span>SHOP THE EXACT MODEL</span><h3>Check current availability and sizing</h3><p>Helmet fit and certification are safety-critical. Use the manufacturer page to confirm the size chart, market approval and current model-year details.</p><a class="buy-button official-choice" href="${h.buy}" target="_blank" rel="noopener noreferrer">Visit ${h.brand} ↗</a></section><section class="modal-section"><h3>Research source</h3><div class="source-links">${h.source.map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${s[0]} ↗</a>`).join('')}</div></section><section class="modal-section"><p><b>*Weight and price vary by size, color, market and model year.</b> Confirm the exact certification label and fit before riding.</p></section></div>`;
+ if(!modal.open)modal.showModal();
 }
 function navigateDetail(direction){const nextIndex=(currentDetailIndex+direction+bikes.length)%bikes.length;openDetail(bikes[nextIndex].id,direction)}
 function toggleCompare(id){if(selected.includes(id))selected=selected.filter(x=>x!==id);else if(selected.length<2)selected.push(id);else selected=[selected[1],id];document.querySelector('#compareCount').textContent=`${selected.length}/2`;document.querySelector('#compareButton').disabled=selected.length!==2;render()}
@@ -103,4 +143,6 @@ document.querySelectorAll('.filter').forEach(btn=>{if(btn.dataset.filter!=='all'
 search.addEventListener('input',render);document.querySelector('#searchForm').addEventListener('submit',e=>{e.preventDefault();render();document.querySelector('#library').scrollIntoView({behavior:'smooth',block:'start'})});document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==search){e.preventDefault();search.focus()}if(e.key==='Escape')document.querySelectorAll('dialog[open]').forEach(d=>d.close())});
 document.querySelector('#compareButton').addEventListener('click',showCompare);document.querySelectorAll('.close-modal').forEach(btn=>btn.addEventListener('click',()=>btn.closest('dialog').close()));document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close()}));
 document.querySelectorAll('[data-profile-nav]').forEach(btn=>btn.addEventListener('click',()=>navigateDetail(Number(btn.dataset.profileNav))));document.addEventListener('keydown',e=>{if(!document.querySelector('#detailModal').open)return;if(e.key==='ArrowLeft')navigateDetail(-1);if(e.key==='ArrowRight')navigateDetail(1)});
-render();renderActionVideos();
+document.querySelectorAll('.helmet-filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelector('.helmet-filter.active').classList.remove('active');btn.classList.add('active');helmetBrand=btn.dataset.helmetBrand;renderHelmets()}));
+helmetSearch.addEventListener('input',renderHelmets);
+render();renderHelmets();renderActionVideos();
